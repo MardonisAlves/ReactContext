@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ useEffect, useState } from 'react';
+import  Context  from './components/context/Context';
+import User from './components/user';
+
 
 function App() {
+ const [data, setdata] = useState([]);
+
+  useEffect(() => {
+    setdata([
+      {
+        name:'Mardonis Alves',
+        email:'mardonisgp@gmail.com'
+      }
+      ,
+      {
+        name:'Pedro Alves',
+        email:'pedro@gmail.com'
+      }
+    ])
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Context.Provider value={data}>
+      <User />
+     </Context.Provider>
   );
+
+ 
 }
 
 export default App;
