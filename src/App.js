@@ -26,9 +26,7 @@ function App() {
       <Context.Provider value={data}>
         <User />
       </Context.Provider>
-      <ButtonCollor.Provider value={text}>
-        <ButtonCustom />
-      </ButtonCollor.Provider>
+      <ButtonCustom />
     </div>
   );
 

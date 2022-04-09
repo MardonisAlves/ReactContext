@@ -32,7 +32,6 @@ const Input = (props) => {
                 name={props.name}
                 value={value}
                 onChange={changeValue}
-                
             />
            <ButtonCustom variantbutton="contained" cor="primary" disabled={false} title="Solicitar" />
 

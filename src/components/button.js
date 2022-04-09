@@ -1,14 +1,19 @@
 import { Button } from "@material-ui/core";
 import ButtonCollor from "./context/ButtonCollor";
 import { useContext } from "react";
-const ButtonCustom = (props) => {
-    const text = useContext(ButtonCollor)
+
+const ButtonCustom = () => {
+    console.log(ButtonCollor)
     return (
-        <>
-            <Button variant="contained" color={text} disabled={props.disabled}>
-                Text
+
+        <ButtonCollor.Consumer>
+        {({color, variant}) => {
+           return  <Button variant={variant} color={color} >
+              {color}
             </Button>
-        </>
+        }}
+        </ButtonCollor.Consumer>
+
     )
 }
 
