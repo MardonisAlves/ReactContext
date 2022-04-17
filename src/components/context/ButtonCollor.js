@@ -2,7 +2,7 @@ import  {  createContext } from "react";
 
 const ButtonCollor = createContext(
 			{
-				color:"secondary",
+				color:"primary",
 				variant:"outlined",
 				size:"small"
 			}
